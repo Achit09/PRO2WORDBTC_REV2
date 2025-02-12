@@ -1,4 +1,5 @@
 @echo off
+<<<<<<< HEAD
 echo Checking Python installation...
 
 :: 檢查 Python 是否安裝
@@ -57,5 +58,17 @@ python -m pip install pycoin
 
 echo [32mAll packages installed successfully![0m
 echo [33mRunning the program...[0m
+=======
+echo Installing required packages...
+
+pip install requests
+pip install base58
+pip install bit
+pip install hdwallet
+pip install rich
+pip install pycoin
+
+echo Running the program...
+>>>>>>> 9a40a0a9eb3e2705cb48a7443bd7e86791b76a7d
 python Pro2WordTrial_c.py
 pause
