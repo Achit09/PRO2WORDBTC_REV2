@@ -33,4 +33,9 @@ var/
 
 # 系統文件
 .DS_Store
-Thumbs.db 
+Thumbs.db
+
+# py2app
+*.pyc
+.eggs/
+*.egg-info/ 

@@ -7,7 +7,7 @@
 # This Script Has Trial / Can Order For Pro version Follow https://mmdrza.com
 ######################################################################################
 
-import requests, json, base58, random, os, binascii, codecs, time
+import requests, json, base58, random, os, binascii, codecs, time, sys
 from hdwallet import HDWallet
 from hdwallet.symbols import BTC
 from hdwallet.utils import generate_mnemonic
@@ -27,6 +27,16 @@ API_ENDPOINTS = [
 ]
 
 console = Console()
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 def get_balance_and_txs(address):
     """從多個API節點獲取餘額和交易數據"""

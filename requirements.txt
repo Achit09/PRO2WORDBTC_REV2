@@ -1,0 +1,7 @@
+requests
+base58
+bit
+hdwallet
+rich
+pycoin
+py2app 
